@@ -6,16 +6,19 @@ using System.Collections.Generic;
 
 namespace HairSalon.Tests
 {
-    [TestClass]
-    public class ClientTests : IDisposable
-    {
-        public void Dispose()
-        {
-            Client.ClearAll();
-            Stylist.ClearAll();
-        }
+  [TestClass]
+  public class ClientTests
+  // : IDisposable
+  {
+    // public void Dispose()
+    // {
+    //   Client.ClearAll();
+    //   Stylist.ClearAll();
+    // }
 
-        public ClientTests()
-        {
-          DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=todolisttest;";
-        }
+    public ClientTests()
+    {
+      DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=todolisttest;";
+    }
+  }
+}

@@ -32,3 +32,5 @@ namespace HairSalon.Models
     {
       return _sylistId;
     }
+  }
+}
