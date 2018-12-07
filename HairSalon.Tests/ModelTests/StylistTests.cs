@@ -37,7 +37,7 @@ namespace HairSalon.Tests
     }
 
     [TestMethod]
-    public void GetId_ReturnsCategoryId_Int()
+    public void GetId_ReturnsStylistId_Int()
     {
       //Arrange
       string name = "Test Stylist";
