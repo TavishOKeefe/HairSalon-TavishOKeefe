@@ -60,6 +60,21 @@ namespace HairSalon.Tests
     }
 
     [TestMethod]
+    public void Save_SavesStylistToDatabase_StylistList()
+    {
+      //Arrage
+      Stylist testStylist = new Stylist("Tavish");
+      testStylist.Save();
+
+      //Act
+      List<Stylist> result = Stylist.GetAll();
+      List<Stylist> testList = new List<Stylist>{testStylist};
+
+      //Assert
+      CollectionAssert.AreEqual(testList, result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsAllStylistObjects_StylistList()
     {
       //Arrange
@@ -76,7 +91,6 @@ namespace HairSalon.Tests
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
-
     }
 
   }

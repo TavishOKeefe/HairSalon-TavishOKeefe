@@ -17,7 +17,11 @@ _This application allows a user to add an associates name, and assigns that asso
 * _**Write method to get stylist id.**_
 * _**Write test for get stylist id.**_
 * _**Write method to save stylist name, and assign id.**_
-* _**Write test to test save method.**_
+* _**Write method to get stylist name, and id.**_
+* _**Write test to check that GetAll method returns an empty list.**_
+* _**Write test to check that GetAll method returns inputed new objects.**_
+* _**Write test to test save method is operational.**_
+* _**Write Equals method so as to separate primary data table and test data table. (Result in GetAll and Save method tests passing).**_
 
 
 ## _Setup/Installation Requirements_
