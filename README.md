@@ -18,10 +18,20 @@ _This application allows a user to add an associates name, and assigns that asso
 * _**Write test for get stylist id.**_
 * _**Write method to save stylist name, and assign id.**_
 * _**Write method to get stylist name, and id.**_
-* _**Write test to check that GetAll method returns an empty list.**_
-* _**Write test to check that GetAll method returns inputed new objects.**_
-* _**Write test to test save method is operational.**_
-* _**Write Equals method so as to separate primary data table and test data table. (Result in GetAll and Save method tests passing).**_
+* _**Write test to check that stylist GetAll method returns an empty list.**_
+* _**Write test to check that stylist GetAll method returns inputed new objects.**_
+* _**Write test to test stylist save method is operational.**_
+* _**Write stylist Equals method so as to separate primary data table and test data table. (Result in stylist GetAll and Save method tests passing).**_
+* _**Write method to get client name.**_
+* _**Write test for get client name method.**_
+* _**Write method to get client id.**_
+* _**Write test for get client id.**_
+* _**Write method to save client name, and assign id.**_
+* _**Write method to get client name, and id.**_
+* _**Write test to check that client GetAll method returns an empty list.**_
+* _**Write test to check that client GetAll method returns inputed new objects.**_
+* _**Write test to test client save method is operational.**_
+* _**Write client Equals method so as to separate primary data table and test data table. (Result in client GetAll and Save method tests passing).**_
 
 
 ## _Setup/Installation Requirements_
