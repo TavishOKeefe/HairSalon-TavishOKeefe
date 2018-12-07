@@ -9,14 +9,13 @@ using System;
 namespace HairSalon.Tests
 {
   [TestClass]
-  public class StylistTest
-  // : IDisposable
+  public class StylistTest : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Client.ClearAll();
-    //   Stylist.ClearAll();
-    // }
+    public void Dispose()
+    {
+      // Client.ClearAll();
+      Stylist.ClearAll();
+    }
     public StylistTest()
     {
       DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=tavish_okeefe_test;";
@@ -58,6 +57,26 @@ namespace HairSalon.Tests
 
       //Assert
       Assert.AreEqual(0, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllStylistObjects_StylistList()
+    {
+      //Arrange
+      string name01 = "Tavish";
+      string name02 = "OKeefe";
+      Stylist newStylist1 = new Stylist(name01);
+      newStylist1.Save();
+      Stylist newStylist2 = new Stylist(name02);
+      newStylist2.Save();
+      List<Stylist> newList = new List<Stylist>{ newStylist1, newStylist2 };
+
+      //Act
+      List<Stylist> result = Stylist.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+
     }
 
   }
