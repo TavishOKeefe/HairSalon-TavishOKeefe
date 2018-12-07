@@ -36,5 +36,19 @@ namespace HairSalon.Tests
       Assert.AreEqual(name, result);
     }
 
+    [TestMethod]
+    public void GetId_ReturnsCategoryId_Int()
+    {
+      //Arrange
+      string name = "Test Stylist";
+      Stylist newStylist = new Stylist(name);
+
+      //Act
+      int result = newStylist.GetId();
+
+      //Assert
+      Assert.AreEqual(0, result);
+    }
+
   }
 }
