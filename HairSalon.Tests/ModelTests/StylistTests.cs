@@ -50,5 +50,15 @@ namespace HairSalon.Tests
       Assert.AreEqual(0, result);
     }
 
+    [TestMethod]
+    public void GetAll_StylistsEmptyAtFirst_List()
+    {
+      //Arrange, Act
+      int result = Stylist.GetAll().Count;
+
+      //Assert
+      Assert.AreEqual(0, result);
+    }
+
   }
 }
