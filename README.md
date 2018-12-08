@@ -34,6 +34,9 @@ _This application allows a user to add an associates name, and assigns that asso
 * _**Write client Equals method so as to separate primary data table and test data table. (Result in client GetAll and Save method tests passing).**_
 * _**Write Find method to locate individual stylists based on their unique Id's.**_
 * _**Write test for Find method to assert that input and result AreEqual based on the use of the Find Method using a unique Id.**_
+* _**Write a method to return a list of the objects (Clients), associated with Stylists specified unique Id's.**_
+* _**Write test for Get Method, and see that it returns an empty array if no Client is associated with a particular Stylist Id.**_
+* _**Write test for Get Method, and see that it returns Client object list associated with Stylist, based on the Id of stylist, and the id_stylist of client.**_
 
 
 
