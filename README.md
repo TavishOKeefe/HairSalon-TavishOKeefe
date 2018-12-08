@@ -32,6 +32,9 @@ _This application allows a user to add an associates name, and assigns that asso
 * _**Write test to check that client GetAll method returns inputed new objects.**_
 * _**Write test to test client save method is operational.**_
 * _**Write client Equals method so as to separate primary data table and test data table. (Result in client GetAll and Save method tests passing).**_
+* _**Write Find method to locate individual stylists based on their unique Id's.**_
+* _**Write test for Find method to assert that input and result AreEqual based on the use of the Find Method using a unique Id.**_
+
 
 
 ## _Setup/Installation Requirements_
