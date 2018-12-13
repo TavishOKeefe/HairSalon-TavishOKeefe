@@ -63,8 +63,8 @@ namespace HairSalon.Models
       {
         int ClientId = rdr.GetInt32(0);
         string ClientName = rdr.GetString(1);
-        int itemStylistId = rdr.GetInt32(2);
-        Client newClient = new Client(ClientName, itemStylistId, ClientId);
+        int StylistId = rdr.GetInt32(2);
+        Client newClient = new Client(ClientName, StylistId, ClientId);
         allClients.Add(newClient);
       }
       conn.Close();
@@ -102,6 +102,55 @@ namespace HairSalon.Models
         bool nameEquality = this.GetName().Equals(newClient.GetName());
         bool stylistEquality = (this.GetStylistId() == newClient.GetStylistId());
         return (nameEquality && idEquality && stylistEquality);
+      }
+    }
+
+    public static Client Find(int searchId)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM clients WHERE id = (@searchId);";
+      cmd.Parameters.AddWithValue("@searchId", searchId);
+
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+
+      int clientId = 0;
+      string clientName = "";
+      int stylistId = 0;
+
+      while (rdr.Read())
+      {
+        clientId = rdr.GetInt32(0);
+        clientName = rdr.GetString(1);
+        stylistId = rdr.GetInt32(2);
+      }
+
+      Client foundClient = new Client(clientName, stylistId, clientId);
+
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+      return foundClient;
+    }
+
+    public void Edit(string newName)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"UPDATE clients SET name = @newName WHERE id = @searchId";
+      cmd.Parameters.AddWithValue("@searchId", _id);
+      cmd.Parameters.AddWithValue("newName",newName);
+      cmd.ExecuteNonQuery();
+      _name = newName;
+
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
       }
     }
   }

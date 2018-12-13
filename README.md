@@ -37,6 +37,10 @@ _This application allows a user to add an associates name, and assigns that asso
 * _**Write a method to return a list of the objects (Clients), associated with Stylists specified unique Id's.**_
 * _**Write test for Get Method, and see that it returns an empty array if no Client is associated with a particular Stylist Id.**_
 * _**Write test for Get Method, and see that it returns Client object list associated with Stylist, based on the Id of stylist, and the id_stylist of client.**_
+* _**Write method to find client based on client id.**_
+* _**Write test to test finding a client based on their id.**_
+* _**Write method to Edit client, using their unique id to find which client to edit.**_
+* _**Write test check if Edit method allows user to change Client name.**_
 
 
 

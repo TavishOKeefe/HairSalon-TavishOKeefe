@@ -26,7 +26,9 @@ namespace HairSalon.Controllers
       Stylist newStylist = new Stylist(stylistName);
       newStylist.Save();
       List<Stylist> allStylists = Stylist.GetAll();
-      return View("Index", allStylists);
+      return RedirectToAction("Index", allStylists);
     }
+
+
   }
 }
