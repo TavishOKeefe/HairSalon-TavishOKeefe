@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello friend!</title>
+  </head>
+  <body>
+    <h1>Add a new client to @Model.GetName()</h1>
+
+    <form action="/stylist/@Model.GetId()/client" method="post">
+      <input id="stylistId" type="hidden" name="stylistId" value="@Model.GetId()">
+      <label for="clientName">Add a new client.</label>
+      <input id="clientName" type="text" name="clientName">
+      <button type="submit" >Add client</button>
+    </form>
+
+  </body>
+</html>
